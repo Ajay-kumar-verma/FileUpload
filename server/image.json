@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tuitionwalahimage",
+  "private_key_id": "5e5a1e9834b5467330bad8f66dce2a487a8dcc7a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqoRowuwYgQvH2\nuERUr8HPqAZ/LsDamAHbINESjTVhoklL4bt4G1+tv80hzvRufCrmjg4k3oZ/6H4l\n8L82Df15kepfYzt7SrSv5Xw1kUHksnXHIYKIP2Wbva2mJJyN4YAWFWGclVgFTnWs\nXtu8sinMfCZZOnTGmhJ+nKMzQRfQva700JclFRFTeZZ+2srR1hzUDHV38fmaZ7g0\noTwLTYfm5bC57rbHXIex3oK+MLkjE8HxT7+zpwP8A/3bA1XRRyswSCgA4BkPWPM2\nhNnMQL6kkJO0+XpArw2sd0l+6CN1srFjt39s44Fiu4UAKGF6UVzcOMPSMBP1tGya\nhjTxHGXLAgMBAAECggEADjTQmesQZQI95BVOdyCVCeWK+O7bFrgeO3Ddh2ZjYegh\noyQ9uA/LZQt5mE2DU2maJs0AB3jRiPfB/QWw3d7HUmZgNaXs72R2a8i3ETyxWEm1\nfalgFVj17EQcH5+fuz5hrDUGhgN3KyXvrTTOpcTNrx1NEhPIYjq0vH7tJZjPU008\nx1PKwYb0LzbrSXjyPxujgQawzKrHwtkfdOPDQN5uXXDk6pwEJppWj/ProlQu+MaP\nSfmUPUqZB/aRghAnLsmWO0RKMkl7tSc9bGT8G/7Na+f4JyP7IpZiMYmyi1gGl3TE\ngNtVQU/E8zN+38QiqqKeqCGon+LkqC272LSgx5z1hQKBgQDivVJJ1z64CCFHqDye\ntwm5CXMq8xgEIeWV8C+gGUjaLz1IunlbPln77afa5jYS0+5DEsjfXvtHchGRcH1N\nLWUkjMX7tsmZgfVLwo1jQEg3bt5JBmj3NXAxD9AESbN0uiWB68am8Sd8LHOZZkIm\ns+oTY60d0qH7ILYTyNOllqthzQKBgQDAphiDPjpLZi0lCnMduOOVs+3RwzMgiLkz\nFhp6fNvrrTru5/rYp+2vDre+DASg9m0ETFdW/RvaEegIaEmX/xNzm/Q0kQpq4RE9\n3G47aM+e8JHwpNi0F4lsIhzQ2llByxZlCpYIkOSFP6Sxt6TaxWegCyUTr93UYJ9K\n+0pJ59At9wKBgQCnLjS4YU7LXqM7NJ7N3+P5XTBfoLI6icvATEKxZzNCPMaRE31b\ne5PZn5e+XTPNmhn5tqYJnPzl5wNxG2IoP6pt0qZAPLxUxW/aFm8tmT4mMUcQzPsk\nG3DHnAMixjzdekshinkEqpcUhaoOl0l7Q/j5pusELERm5+2YlOEJHRjsmQKBgQCU\n9JhFeir2u6UyW7cQhzGpQbsjkouIn06bWn7UsJAW1RWZPdMuDAHydi3KC17U2lUG\nmsR5ZTFQ1sGTJpeop7hxjmcu8eqdIzMCotq0ouDN4vLkn4FTFlPSQToInpufDJlf\nPOUu8GFRShlctEMKSNJL4/IiG7wohyEDh/Mz28KSlwKBgH/3ZnWEHWNQTgVI7L5W\nRvq165Qsx5W+4uqQJQy+nTWrmuLRrktretK0aVjnhArPwJ4xP0qn/GfStplGc2oq\nMyDj9v+1AdZEt6/JW1THXggya3NUI/Zg1T5pbYwvRdSLlNG9dFdhW0kxLI4HwGuH\nb0S18Syhjhh4tXhxADSL1h8j\n-----END PRIVATE KEY-----\n",
+  "client_email": "tuitionwalah@tuitionwalahimage.iam.gserviceaccount.com",
+  "client_id": "117846287347606090135",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tuitionwalah%40tuitionwalahimage.iam.gserviceaccount.com"
+}
