@@ -19,8 +19,8 @@ async function uploadFile(){
     })    
 
   const fileName = {
-    'name':'image.jpeg',
-     'parents':[google_Folder_Api]
+    name:'image.jpeg',
+     parents:[google_Folder_Api]
   }   
   
   const media = {
