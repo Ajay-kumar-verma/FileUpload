@@ -22,7 +22,7 @@ app.get("/",(req,res)=>{
 
 app.post('/',(req,res) => {
 
-    // console.log(req.files.screenshot);
+    console.log(req.files);
 
 const uploadFileName =req.files.screenshot.name;
 
@@ -33,8 +33,7 @@ const Name =`Ajay kumar verma`;
 const file =req.files.screenshot;
 let uploadPath = __dirname+"/"+fileName;
 
-file.mv(uploadPath,er =>console.log(er));
-
+file.mv(uploadPath,er =>console.log({er}));
  res.sendStatus(200);
 })
 

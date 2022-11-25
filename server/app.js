@@ -39,8 +39,8 @@ return resp.data;
      console.log({error})   
     }
 } 
-
-
 uploadFile().then(res=>console.log({res}));
+
+// `https://drive.google.com/uc?export=view&id=1OSq6iIRDs8TyIEBXrbOqZKwzPnNZUbmu` 
 
 
