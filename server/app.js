@@ -23,17 +23,14 @@ const drive = google.drive({
     auth:oauth2Client
 });
 
-// const filePath = path.join(__dirname,'image.jpeg')
 
-async function upload(file){
+async function upload(parents,file,name){
 try {
-    
-
     // uploading in folder 
     // if no parent it upload in main folder 
     const requestBody = {
-        name:'abc',
-         parents:['1E-7IhOYPmWhYv4vvVH-cTkw4ox70JSzQ']
+        name,
+         parents:[parents]
       }   
       
       const media = {
@@ -54,28 +51,10 @@ try {
 }
 
 
-async function fileList(){
+async function fileList(id){
     try {
-        // uploading in folder 
-        // if no parent it upload in main folder 
-        const requestBody = {
-         parents:['1E-7IhOYPmWhYv4vvVH-cTkw4ox70JSzQ']
-          }   
-          
-          const media = {
-            MimeType : 'imgae/jpg',
-            body:fs.createReadStream(filePath)
-          }
-        
-    
         const rep = await drive.files.list({
-        //    requestBody,
-            // q: 'mimeType=\'image/jpeg\'',
-            fileId:'11zfJKdRX407kbxHH4btcubDbwvVZABl5'
-            // fields: 'nextPageToken, files(id, name)',
-            // id:'11jNmzuoYs5ro6F-nQo-sMZH7kv6akI-3',
-            // spaces: 'drive',
-            // parents:['1E-7IhOYPmWhYv4vvVH-cTkw4ox70JSzQ']
+        q: `'${id}' in parents and trashed=false`,
          
         })
       console.log({rep:rep.data.files});  
@@ -87,9 +66,9 @@ async function fileList(){
     
 
 
-const id = '1E-7IhOYPmWhYv4vvVH-cTkw4ox70JSzQ';
+// const id = '1E-7IhOYPmWhYv4vvVH-cTkw4ox70JSzQ';
 
-async function deleteFile(){
+async function deleteFile(id){
     try {
         
         const rep = await drive.files.delete({
@@ -104,9 +83,8 @@ async function deleteFile(){
 
 
     
-    async function generatePublicUrl(){
+    async function generatePublicUrl(id){
         try {
-            
             const rep = await drive.permissions.create({
                 fileId:id,
                 requestBody:{
@@ -124,18 +102,21 @@ console.log({result});
         } catch (error) {
             console.log({error})
         }
-        
         }
     
 
-
-   async function createFolder(){
+  async function createFolder(parents,name){
             try {
        
+    //   const requestBody = {
+    //   name,
+    //   parents:[parents]
+    //      }   
+                  
          var fileMetadata = {
-          name : 'name',
+          name  ,
          mimeType : 'application/vnd.google-apps.folder',
-         parents: 'folderIds'
+         parents: [parents]
        };
           const rep = await drive.files.create({
           resource: fileMetadata,
@@ -146,15 +127,22 @@ console.log({result});
      } catch (error) {
     console.log({error})
     }
-            
-    }
+   }
 
 
-// export default upload;    
-module.exports = {upload}
+  const aadharcardlocation = '14gehPs16lPgpyDGasWJYlNSzUn_G7H6o';  
+  const photoslocation = '1Fu2JqgMQ2FEMhdEq4m_aB7kh_IffHkqN';
+
+createFolder(photoslocation,"zzzzzzz");
+
+//  const filePath = path.join(__dirname,'image.jpeg')
+//  upload(aadharcardlocation,filePath,"adharcard");
+//  upload(photoslocation,filePath,"adharcard");
+//  generatePublicUrl('1PGEc50xQALJYs-hwWZHeFV4TnViM3J7F');
+
+const folderId = '1WWI3KqChM8HafpZGSiUl6O7SOaooBLm9'
+// fileList(folderId); 
+// module.exports = {upload,deleteFile,generatePublicUrl,createFolder}
 console.log("App END ")
-// upload(filePath);
 // deleteFile();
-// generatePublicUrl();
-// createFolder();
-// fileList();cd 
+// createFolder("bhooth");
