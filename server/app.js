@@ -142,7 +142,7 @@ createFolder(photoslocation,"zzzzzzz");
 
 const folderId = '1WWI3KqChM8HafpZGSiUl6O7SOaooBLm9'
 // fileList(folderId); 
-// module.exports = {upload,deleteFile,generatePublicUrl,createFolder}
+module.exports = {upload,deleteFile,generatePublicUrl,createFolder}
 console.log("App END ")
 // deleteFile();
 // createFolder("bhooth");
