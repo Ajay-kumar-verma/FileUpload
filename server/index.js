@@ -1,13 +1,14 @@
-import express from 'express'
-import fileUpload from 'express-fileupload' 
-import fs from 'fs'
-import path from 'path'
-import cors from 'cors';
+const express = require('express')
+const fileUpload = require('express-fileupload'); 
+const fs = require('fs')
+// const path = require('path')
+const cors = require('cors');
+const {upload} =  require('./app'); 
+// console.log({upload})
+
 const app =express();
 
-const __dirname = path.resolve("../Files");  
-
-console.log({__dirname})
+// console.log({__dirname})
 
 app.use(cors()); // this is for connection 
 app.use(express.json());  // this is body 
@@ -20,21 +21,34 @@ app.get("/",(req,res)=>{
 })
 
 
-app.post('/',(req,res) => {
-
-    console.log(req.files);
-
+app.post('/', async (req,res) => {
+    // console.log(req.files);
 const uploadFileName =req.files.screenshot.name;
-
 const Mobile = `8095240976`;
 const Name =`Ajay kumar verma`;
     const fileName = `${Name}_${Mobile}_${Date.now()}_${uploadFileName}`;
 // // console.log(req.files.image)
 const file =req.files.screenshot;
-let uploadPath = __dirname+"/"+fileName;
+console.log({file})
 
-file.mv(uploadPath,er =>console.log({er}));
- res.sendStatus(200);
+let uploadPath = __dirname+"/"+fileName;
+file.mv(uploadPath,async (er) =>{
+     if(er)return ;
+     await upload(uploadPath);
+     try {
+         fs.unlinkSync(uploadPath)
+         //file removed
+       } catch(err) {
+         console.error({err})
+    }
+    
+    
+    console.log({er})
+
+});
+
+res.sendStatus(200);
+
 })
 
 

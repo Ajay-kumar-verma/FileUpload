@@ -24,7 +24,7 @@ const drive = google.drive({
 
 const filePath = path.join(__dirname,'image.jpeg')
 
-async function upload(){
+async function upload(file){
 try {
     
 
@@ -37,7 +37,7 @@ try {
       
       const media = {
         MimeType : 'imgae/jpg',
-        body:fs.createReadStream(filePath)
+        body:fs.createReadStream(file)
       }
     
 
@@ -149,9 +149,10 @@ console.log({result});
     }
 
 
-        
-// upload();
+export default upload;    
+
+// upload(filePath);
 // deleteFile();
 // generatePublicUrl();
 // createFolder();
-fileList();
+// fileList();cd 
